@@ -39,10 +39,10 @@
     }
     return self;
 }
--(UIImageView *)iconIV{
+-(TRImageView *)iconIV{
     if (_iconIV==nil) {
-        _iconIV = [UIImageView new];
-        _iconIV.contentMode = UIViewContentModeScaleAspectFill;
+        _iconIV = [TRImageView new];
+      //  _iconIV.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _iconIV;
 }
@@ -58,6 +58,7 @@
         _longTitleLB = [UILabel new];
         _longTitleLB.font = [UIFont systemFontOfSize:14];
         _longTitleLB.textColor = [UIColor lightGrayColor];
+        _longTitleLB.numberOfLines = 0;
     }
     return _longTitleLB;
 }

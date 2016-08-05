@@ -20,32 +20,33 @@
 - (UILabel *)clickNumberLb {
     if(_clickNumberLb == nil) {
         _clickNumberLb = [[UILabel alloc] init];
-        _titleLb.font = [UIFont systemFontOfSize:12];
-        _titleLb.textColor=[UIColor lightGrayColor];
+        _clickNumberLb.font = [UIFont systemFontOfSize:12];
+        _clickNumberLb.textColor=[UIColor lightGrayColor];
+        _clickNumberLb.textAlignment = NSTextAlignmentRight;
     }
     return _clickNumberLb;
 }
 
-- (UIImageView *)iconIV0 {
+- (TRImageView *)iconIV0 {
     if(_iconIV0 == nil) {
-        _iconIV0 = [[UIImageView alloc] init];
-        _iconIV0.contentMode = UIViewContentModeScaleAspectFill;
+        _iconIV0 = [[TRImageView alloc] init];
+        
     }
     return _iconIV0;
 }
 
-- (UIImageView *)iconIV1 {
+- (TRImageView *)iconIV1 {
     if(_iconIV1 == nil) {
-        _iconIV1 = [[UIImageView alloc] init];
-        _iconIV0.contentMode = UIViewContentModeScaleAspectFill;
+        _iconIV1 = [[TRImageView alloc] init];
+       
     }
     return _iconIV1;
 }
 
-- (UIImageView *)iconIV2 {
+- (TRImageView *)iconIV2 {
     if(_iconIV2 == nil) {
-        _iconIV2 = [[UIImageView alloc] init];
-        _iconIV0.contentMode = UIViewContentModeScaleAspectFill;
+        _iconIV2 = [[TRImageView alloc] init];
+     
     }
     return _iconIV2;
 }
@@ -63,7 +64,8 @@
         [self.clickNumberLb mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(10);
             make.right.mas_equalTo(-10);
-            make.width.mas_greaterThanOrEqualTo(40).mas_lessThanOrEqualTo(70);
+            make.width.mas_greaterThanOrEqualTo(40);
+            make.width.mas_lessThanOrEqualTo(70);
             
         }];
         [self.iconIV0 mas_makeConstraints:^(MASConstraintMaker *make) {

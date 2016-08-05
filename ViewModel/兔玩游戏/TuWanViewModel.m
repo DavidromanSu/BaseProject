@@ -60,7 +60,7 @@
     return [self modelForArr:self.dataArr row:row].title;
 }
 -(NSURL*)iconURLForRowInList:(NSInteger)row{
-    return [NSURL URLWithString:[self modelForArr:self.dataArr row:row].url] ;
+    return [NSURL URLWithString:[self modelForArr:self.dataArr row:row].litpic] ;
 }
 -(NSString*)descForRowInList:(NSInteger)row{
     return [self modelForArr:self.dataArr row:row].longtitle;
@@ -82,5 +82,14 @@
 }
 -(NSURL *)detailURLForRowInIndexPic:(NSInteger)row{
     return [NSURL URLWithString:[self modelForArr:self.indexPicArr row:row].html5] ;
+}
+-(NSArray *)iconsURLForRowInList:(NSInteger)row{
+    NSArray *arr = [self modelForArr:self.dataArr row:row].showitem;
+    NSMutableArray *array = [NSMutableArray new];
+    for (int i=0; i<arr.count; i++) {
+        TuWanDataIndexpicShowitemModel *model = arr[i];
+        [array addObject:model.pic];
+    }
+    return [array copy];
 }
 @end

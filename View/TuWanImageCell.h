@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TRImageView.h"
 @interface TuWanImageCell : UITableViewCell
 @property (nonatomic,strong)UILabel *titleLb;
 @property (nonatomic,strong)UILabel *clickNumberLb;
-@property (nonatomic,strong)UIImageView *iconIV0;
-@property (nonatomic,strong)UIImageView *iconIV1;
-@property (nonatomic,strong)UIImageView *iconIV2;
+@property (nonatomic,strong)TRImageView *iconIV0;
+@property (nonatomic,strong)TRImageView *iconIV1;
+@property (nonatomic,strong)TRImageView *iconIV2;
 
 @end

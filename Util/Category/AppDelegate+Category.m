@@ -35,7 +35,7 @@
     }];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [MobClick startWithAppkey:@"57a159ae67e58ef5f500211c"];
-    
+    [MobClick setLogEnabled:YES];
 }
 
 

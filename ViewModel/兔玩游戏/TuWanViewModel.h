@@ -20,6 +20,7 @@
 -(NSURL*)iconURLForRowInList:(NSInteger)row;
 -(NSString*)descForRowInList:(NSInteger)row;
 -(NSString*)clickForRowInList:(NSInteger)row;
+-(NSArray*)iconsURLForRowInList:(NSInteger)row;
 -(NSURL*)iconURLForRowInIndexPic:(NSInteger)row;
 -(NSString*)titleForRowInIndexPic:(NSInteger)row;
 @property(nonatomic)NSInteger indexPicNumber;
