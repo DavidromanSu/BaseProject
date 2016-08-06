@@ -23,4 +23,18 @@
     spaceItem.width = -10;
     VC.navigationItem.leftBarButtonItems = @[spaceItem,btItem];
 }
++(void)addBackItemToVC:(UIViewController *)VC{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:[UIImage imageNamed:@"btn_back_n"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"btn_back_h"] forState:UIControlStateHighlighted];
+    btn.frame =CGRectMake(0, 0, 45, 44);
+    [btn bk_addEventHandler:^(id sender) {
+        [VC.navigationController popViewControllerAnimated:YES];
+    } forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *btItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    
+    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    spaceItem.width = -16;
+    VC.navigationItem.leftBarButtonItems = @[spaceItem,btItem];
+}
 @end

@@ -8,7 +8,7 @@
 
 #import "BaseNetManager.h"
 #import "TuWanModel.h"
-
+#import "TuWanPicModel.h"
 typedef NS_ENUM(NSUInteger,InfoType){
     InfoTypeTouTiao,        //头条
     InfoTypeDuJia,          //独家
@@ -29,5 +29,5 @@ typedef NS_ENUM(NSUInteger,InfoType){
 };
 @interface TuWanNetManager : BaseNetManager
 +(id)getTuWanInfoWithType:(InfoType)type start:(NSInteger)start kCompletionHandle;
-
++(id)getPicDetailWithID:(NSString*)aid kCompletionHandle;
 @end

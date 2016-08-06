@@ -92,4 +92,28 @@
     }
     return [array copy];
 }
+-(BOOL)isPicInListForRow:(NSInteger)row{
+    return [[self modelForArr:self.dataArr row:row].type isEqualToString:@"pic"];
+}
+-(BOOL)isPicInIndexPicForRow:(NSInteger)row{
+    return [[self modelForArr:self.indexPicArr row:row].type isEqualToString:@"pic"];
+}
+-(BOOL)isVideoInListForRow:(NSInteger)row{
+    return [[self modelForArr:self.dataArr row:row].type isEqualToString:@"video"];
+}
+-(BOOL)isVideoInIndexPicForRow:(NSInteger)row{
+    return [[self modelForArr:self.indexPicArr row:row].type isEqualToString:@"video"];
+}
+-(BOOL)isHTMLInListForRow:(NSInteger)row{
+        return [[self modelForArr:self.dataArr row:row].type isEqualToString:@"all"];
+}
+-(BOOL)isHTMLInIndexPicForRow:(NSInteger)row{
+    return [[self modelForArr:self.indexPicArr row:row].type isEqualToString:@"all"];
+}
+-(NSString *)aidForRowInList:(NSInteger)row{
+    return [self modelForArr:self.dataArr row:row].aid;
+}
+-(NSString *)aidForRowInIndexPicForRow:(NSInteger)row{
+      return [self modelForArr:self.indexPicArr row:row].aid;
+}
 @end

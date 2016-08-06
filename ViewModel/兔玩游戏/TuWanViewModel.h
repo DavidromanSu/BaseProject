@@ -26,4 +26,12 @@
 @property(nonatomic)NSInteger indexPicNumber;
 -(NSURL*)detailURLForRowInList:(NSInteger)row;
 -(NSURL*)detailURLForRowInIndexPic:(NSInteger)row;
+-(BOOL)isPicInListForRow:(NSInteger)row;
+-(BOOL)isPicInIndexPicForRow:(NSInteger)row;
+-(BOOL)isVideoInListForRow:(NSInteger)row;
+-(BOOL)isVideoInIndexPicForRow:(NSInteger)row;
+-(BOOL)isHTMLInListForRow:(NSInteger)row;
+-(BOOL)isHTMLInIndexPicForRow:(NSInteger)row;
+-(NSString*)aidForRowInList:(NSInteger)row;
+-(NSString*)aidForRowInIndexPicForRow:(NSInteger)row;
 @end

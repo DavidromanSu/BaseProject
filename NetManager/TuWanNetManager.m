@@ -7,10 +7,12 @@
 //
 
 #import "TuWanNetManager.h"
+#import "TuWanPicModel.h"
 #define kTuWanPath  @"http://cache.tuwan.com/app/"
 #define kAppId      @"appid": @1
 #define kAppVer     @"appver": @2.1
 #define kClassMore  @"classmore": @"indexpic"
+#define kTuWanDetailPath @"http://api.tuwan.com/app/"
 
 #define kRemoveClassMore(dic)        [dic removeObjectForKey:@"classmore"];
 #define kSetDtId(string, dic)        [dic setObject:string forKey:@"dtid"];
@@ -98,5 +100,9 @@
 return [self GET:path parameters:nil completionHandler:^(id responseObj, NSError *error) {
     completionHandle([TuWanModel objectWithKeyValues:responseObj],error);} ];
 }
-
++(id)getPicDetailWithID:(NSString *)aid completionHandle:(void (^)(id, NSError *))completionHandle{
+    return [self GET:kTuWanDetailPath parameters:@{kAppId,@"aid":aid} completionHandler:^(id responseObj, NSError *error) {
+        completionHandle([TuWanPicModel objectArrayWithKeyValuesArray:responseObj].firstObject,error);
+         }];
+}
 @end
