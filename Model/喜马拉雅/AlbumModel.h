@@ -150,6 +150,12 @@
 
 @property (nonatomic, copy) NSString *coverLarge;
 
+@property (nonatomic, assign) NSInteger downloadSize;
+
+@property (nonatomic, assign) NSInteger downloadAacSize;
+
+@property (nonatomic, copy) NSString *downloadUrl;
+
 @property (nonatomic, assign) NSInteger comments;
 
 @property (nonatomic, assign) NSInteger trackId;

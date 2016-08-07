@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RankListViewController : UIViewController
-
++(UINavigationController*)defaultNavi;
 @end
