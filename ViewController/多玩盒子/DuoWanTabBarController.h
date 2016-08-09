@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DuoWanTabBarController : UITabBarController
-
++(DuoWanTabBarController*)standardInstance;
 @end

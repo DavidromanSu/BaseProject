@@ -37,8 +37,9 @@
     if (!_sideMenu) {
      _sideMenu = [[RESideMenu alloc]initWithContentViewController:[TuWanViewController standardTuWanNavi] leftMenuViewController:[LeftViewController new] rightMenuViewController:nil];
         
-        _sideMenu.backgroundImage = [UIImage imageNamed:@"10994916_0800"];
+        _sideMenu.backgroundImage = [UIImage imageNamed:@"a4816418"];
         _sideMenu.menuPrefersStatusBarHidden = YES;
+        _sideMenu.bouncesHorizontally=NO;
     }
     return _sideMenu;
 }

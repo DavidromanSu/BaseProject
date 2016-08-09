@@ -9,6 +9,7 @@
 #import "LeftViewController.h"
 #import "TuWanViewController.h"
 #import "RankListViewController.h"
+#import "DuoWanTabBarController.h"
 @interface LeftViewController()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *items;
@@ -62,6 +63,10 @@
             break;
         case 1:{
             [self.sideMenuViewController setContentViewController:[RankListViewController defaultNavi]animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+        }
+        case 2:{
+            [self.sideMenuViewController setContentViewController:[DuoWanTabBarController standardInstance]animated:YES];
             [self.sideMenuViewController hideMenuViewController];
         }
             break;
